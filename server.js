@@ -14,9 +14,9 @@ const PORT = process.env.PORT || 3000;
 const ODDS_API_KEY = process.env.ODDS_API_KEY;
 
 if (!ODDS_API_KEY) {
-  console.error('Missing ODDS_API_KEY environment variable.');
-  console.error('Set it locally with: export ODDS_API_KEY=your_key_here');
-  console.error('On Render, add it in the service's Environment tab.');
+  console.error("Missing ODDS_API_KEY environment variable.");
+  console.error("Set it locally with: export ODDS_API_KEY=your_key_here");
+  console.error("On Render, add it in the service's Environment tab.");
   process.exit(1);
 }
 
