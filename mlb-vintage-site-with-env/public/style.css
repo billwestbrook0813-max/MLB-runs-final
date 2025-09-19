@@ -1,0 +1,54 @@
+
+:root{
+  --paper:#f5efdc;
+  --ink:#1b1a1a;
+  --pin:#e6dcc2;
+  --accent:#9a2a2a;
+  --deep:#6b1f1f;
+  --green:#1f5d3b;
+  --shadow: 0 10px 30px rgba(0,0,0,.15);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:'Spectral', Georgia, serif;
+  color:var(--ink);
+  background:
+    repeating-linear-gradient(90deg, var(--pin) 0 8px, transparent 8px 12px),
+    linear-gradient(var(--paper),var(--paper));
+  min-height:100vh;
+  display:flex;flex-direction:column;
+}
+.site-header{
+  display:flex;align-items:center;gap:1rem;
+  padding:1rem 1.25rem;border-bottom:4px double var(--deep);
+  background:linear-gradient(180deg,#fff7e6, var(--paper));
+  position:sticky;top:0;z-index:10;
+}
+.logo{width:56px;height:56px}
+.titles h1{margin:0;font-family:'DM Serif Display',serif;letter-spacing:.5px}
+.titles .subtitle{margin:.15rem 0 0;font-size:.95rem;color:var(--deep)}
+.date-block{margin-left:auto;display:flex;align-items:center;gap:.5rem;font-family:'Roboto Mono', monospace}
+#refreshBtn{
+  border:2px solid var(--deep);background:#fff;cursor:pointer;padding:.25rem .6rem;border-radius:6px;font-weight:600
+}
+.container{max-width:1100px;margin:1.25rem auto;padding:0 1rem;flex:1}
+.card{background:#fff;border:2px solid var(--deep);box-shadow:var(--shadow);border-radius:12px;padding:1rem 1.25rem}
+.totals-panel .total-row{display:flex;align-items:flex-end;gap:2rem;flex-wrap:wrap}
+.label{font-family:'Roboto Mono',monospace;color:var(--green);font-size:.9rem}
+.value{font-family:'DM Serif Display',serif;font-size:2.4rem;line-height:1.1}
+.accent{color:var(--accent)}
+.meta{margin-top:.5rem;color:#555;font-family:'Roboto Mono',monospace}
+.hint{margin-top:.75rem;font-size:.9rem;color:#6b1f1f}
+.games h2{margin:.25rem 0 1rem;font-family:'DM Serif Display',serif}
+.games-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(295px,1fr));gap:1rem}
+.game{border:1px solid var(--deep);border-radius:10px;padding:.75rem;background:linear-gradient(180deg,#fff,var(--paper) 80%)}
+.game.live{outline:3px solid var(--green)}
+.game.final{opacity:.9}
+.game .row{display:flex;justify-content:space-between;align-items:center;margin:.25rem 0}
+.teams{font-weight:700}
+.status{font-family:'Roboto Mono',monospace;color:#333}
+.pitchers{font-size:.95rem;margin-top:.25rem}
+.book-total{font-family:'Roboto Mono',monospace;color:#9a2a2a}
+.site-footer{padding:1rem;text-align:center;border-top:4px double var(--deep);background:#fff;margin-top:1rem}
+@media (max-width:560px){ .value{font-size:2rem} }
