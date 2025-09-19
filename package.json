@@ -2,6 +2,7 @@
   "name": "mlb-vintage-slate",
   "version": "1.0.0",
   "description": "Vintage baseball-themed MLB slate totals & projections site with OddsAPI proxy.",
+  "type": "module",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -12,5 +13,8 @@
     "node-fetch": "^3.3.2",
     "compression": "^1.7.4",
     "cors": "^2.8.5"
+  },
+  "engines": {
+    "node": ">=18 <=22"
   }
 }
